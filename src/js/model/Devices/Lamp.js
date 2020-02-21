@@ -11,12 +11,16 @@ export default class Lamp extends Device {
     return this._brightness.value;
   }
 
-  get activeColor() {
-    return [
-      this._activeColor.red,
-      this._activeColor.green,
-      this._activeColor.blue,
-    ];
+  get red() {
+    return this._activeColor.red;
+  }
+
+  get green() {
+    return this._activeColor.green;
+  }
+
+  get blue() {
+    return this._activeColor.blue;
   }
 
   set brightness(value) {
