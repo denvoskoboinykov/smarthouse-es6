@@ -1,9 +1,8 @@
-export default class DelayedAction {
-  constructor(deviceId, delay, action, ...args) {
+class DelayedAction {
+  constructor(deviceId, delay, action) {
     this._deviceId = deviceId;
     this._delay = delay;
     this._action = action;
-    this._args = args;
   }
 
   get deviceId() {

@@ -1,4 +1,4 @@
-export default class Range {
+class Range {
   constructor(min, max, initialValue) {
     this._min = min;
     this._max = max;
