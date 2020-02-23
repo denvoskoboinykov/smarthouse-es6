@@ -1,4 +1,4 @@
-export default class SmartHouse {
+class SmartHouse {
   constructor(id, name, map) {
     this._id = id;
     this._name = name;
@@ -42,15 +42,12 @@ export default class SmartHouse {
     this._devices.forEach(device => device.disable());
   }
 
-  //options = {deviceId, delay, action, args}
-  //action - callback F from [device].prototype, bcs no delegation for [device] methods (SmartHouse methods doesn't work)
-  //no getter/setter
-  //arg - arguments, that F takes
-  delayAction(options) {
-    const { deviceId, delay, action, args } = options;
+  delayAction(options, callback) {
+    const { delay, action } = options;
     const counterId = setTimeout(() => {
-      action.apply(this.selectDevice(deviceId), args);
+      action();
       this._delayedActions.delete(counterId);
+      callback();
     }, delay);
     this._delayedActions.set(counterId, options);
   }

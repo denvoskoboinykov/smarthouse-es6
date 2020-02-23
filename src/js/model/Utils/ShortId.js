@@ -1,4 +1,4 @@
-export default class ShortId {
+class ShortId {
   static generate = () =>
     '_' +
     Math.random()

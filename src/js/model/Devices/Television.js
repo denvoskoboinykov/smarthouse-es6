@@ -1,6 +1,4 @@
-import Device from './Device.js';
-
-export default class Television extends Device {
+class Television extends Device {
   constructor(id, name, screenDiagonal, volume, saturation, brightness) {
     super(id, name);
     this._screenDiagonal = screenDiagonal;

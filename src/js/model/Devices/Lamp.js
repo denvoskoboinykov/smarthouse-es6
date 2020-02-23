@@ -1,6 +1,4 @@
-import Device from './Device.js';
-
-export default class Lamp extends Device {
+class Lamp extends Device {
   constructor(id, name, brightness, color) {
     super(id, name);
     this._brightness = brightness;
