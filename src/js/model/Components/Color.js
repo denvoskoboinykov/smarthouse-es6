@@ -1,4 +1,4 @@
-export default class Color {
+class Color {
   constructor(red, green, blue) {
     this._red = red;
     this._green = green;

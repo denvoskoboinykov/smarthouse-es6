@@ -1,4 +1,4 @@
-export default class Device {
+class Device {
   constructor(id, name) {
     this._id = id;
     this._name = name;
